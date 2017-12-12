@@ -2,6 +2,7 @@ package com.example.myanimation;
 
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
+import android.animation.FloatEvaluator;
 import android.animation.ValueAnimator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -92,6 +93,7 @@ public class ValueAnimatorIntActivity extends AppCompatActivity implements View.
 
                     //步骤2：设置动画的各种播放属性
                     valueAnimator1.setDuration(2000);
+                    valueAnimator1.setEvaluator(new FloatEvaluator());
                     //设置动画运行时长  2s
 
                     //步骤3：将属性数值手动赋值给对象的属性：此处是将值赋值给按钮的宽度
