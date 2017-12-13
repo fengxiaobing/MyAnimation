@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
 
 /**
@@ -53,7 +54,7 @@ public class ValueAnimatorIntActivity extends AppCompatActivity implements View.
                 //动画播放次数 = infinite是，动画无线重复
 
                 valueAnimator.setRepeatMode(ValueAnimator.REVERSE);
-                //设置重复播放动火模式
+                //设置重复播放动画模式
                 //ValueAnimator.RESTART(默认)：正序播放
                 //ValueAnimator.REVERSE:倒叙播放
 
@@ -95,6 +96,9 @@ public class ValueAnimatorIntActivity extends AppCompatActivity implements View.
                     valueAnimator1.setDuration(2000);
                     valueAnimator1.setEvaluator(new FloatEvaluator());
                     //设置动画运行时长  2s
+
+                    valueAnimator1.setRepeatCount(Animation.INFINITE);
+
 
                     //步骤3：将属性数值手动赋值给对象的属性：此处是将值赋值给按钮的宽度
                             // 设置监听更新器：即数值每次变化都更新都会调用该方法
